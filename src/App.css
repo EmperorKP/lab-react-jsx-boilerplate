@@ -1,1 +1,18 @@
 /* add your styles here */
+h1{
+    text-align: center;
+
+}
+.main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+    justify-items: center;
+    margin: auto;
+
+}
+.image{
+    width: 730px;;
+    
+}
