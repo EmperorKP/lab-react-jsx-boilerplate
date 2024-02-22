@@ -22,26 +22,34 @@ const imageData = ()=>{
   ]
   return data;
 }
-let img_arr=imageData()
 
 function App() {
   // code here
+  let image_arr = imageData()
+  console.log(image_arr)
   return(
     <>
-    <h1>kalvium gallery</h1>
-    <div className='main'>
-      <img src= {img_arr[0].img} className='image' alt="" />
-      <img src= {img_arr[0].img} className='image' alt="" />
-      <img src= {img_arr[0].img} className='image' alt="" />
-      <img src= {img_arr[0].img} className='image' alt="" />
+    <h1>Kalvium gallery</h1>
+    {/* <div className='parentDiv'>
+      <img  className='images' src={image_arr[0].img} alt="" />
+      <img  className='images' src={image_arr[0].img} alt="" />
+      <img  className='images' src={image_arr[0].img} alt="" />
+      <img  className='images' src={image_arr[0].img} alt="" />
 
-
-
+    </div> */}
+    <div className='parentDiv'>
+      {
+        image_arr.map(elem =>{
+          return(
+            <img src={elem.img} className='images' alt="elephant" />
+          )
+        })
+      }
     </div>
-    
+
+
+
     </>
-    
-    
   )
 }
 
